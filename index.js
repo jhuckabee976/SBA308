@@ -63,6 +63,8 @@ function getLearnerData(
 
 const courseInfo = { id: 1, name: "JavaScript Fundamentals" };
 
+console.log(courseInfo);
+
 const assignmentGroups = [
   {
     id: 1,
@@ -100,6 +102,8 @@ const assignmentGroups = [
   },
 ];
 
+console.log(assignmentGroups);
+
 const learnerSubmissions = [
   {
     learner_id: 1,
@@ -122,6 +126,8 @@ const learnerSubmissions = [
     score: 160,
   },
 ];
+
+console.log(learnerSubmissions);
 
 // Call the function and log the result
 const results = getLearnerData(
