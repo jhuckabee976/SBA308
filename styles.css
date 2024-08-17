@@ -1,0 +1,32 @@
+body {
+    margin: 100;
+    padding: 50;
+    height: 100vh;
+    
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-color: black; 
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 1px 1px 2px black;
+  }
+  
+  h1, h2 {
+    text-align: justify;
+  }
+  
+  #background-image {
+    position: center;
+    width: fit-content;
+    height: fit-content;
+    border: 10px solid green;
+  }
+  
+  h1 {
+    color: rgb(34, 223, 34);
+  }
+  
+  h2 {
+    color: rgb(5, 247, 170);
+  }
