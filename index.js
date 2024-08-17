@@ -22,4 +22,17 @@ function getLearnerData(courseInfo, assignmentGroups, assignments, learnerSubmis
 
                     console.log(submissions.forEach);
                     
-                   
+                    const latePenalty = new Date(submission.submitted_at) > new Date(assignment.due_at) ? 0.1 : 0;
+
+                    const weightedScore = (submission.score / assignment.points_possible) * (1 - latePenalty) * group.group_weight;
+                    
+                    const learnerResult = results.find(result => result.id === submission.learner_id);
+                    
+                    if (learnerResult) {
+                        learnerResult.avg += weightedScore;
+                    } else {
+                        results.push({ id: submission.learner_id, avg: weightedScore });
+                    }
+                });
+            });
+        });    
